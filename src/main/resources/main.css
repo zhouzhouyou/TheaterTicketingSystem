@@ -1,0 +1,41 @@
+* {
+    -fx-m-indigo: #3D5AFE;
+    -fx-m-teal:   #26A69A;
+    -fx-m-pink:   #FF4081;
+    -fx-m-red:    #FF1744;
+}
+.button {
+    -fx-background-color: -fx-m-teal;
+    -fx-text-fill: white;
+}
+
+.add_button {
+    -fx-pref-height: 40px;
+    -fx-pref-width: 40px;
+    -fx-background-color: -fx-m-teal;
+    -fx-background-radius: 40px;
+}
+
+.clear_button {
+    -fx-background-color: -fx-m-red;
+    -fx-text-fill: white;
+}
+
+.remove_button {
+    -fx-pref-height: 40px;
+    -fx-pref-width: 40px;
+    -fx-background-color: -fx-m-red;
+    -fx-background-radius: 40px;
+}
+
+.slider > .thumb {
+    -fx-background-color: -fx-m-teal;
+}
+
+.slider > .colored-track {
+    -fx-background-color: -fx-m-teal;
+}
+
+.slider > .animated-thumb {
+    -fx-background-color: -fx-m-teal;
+}
