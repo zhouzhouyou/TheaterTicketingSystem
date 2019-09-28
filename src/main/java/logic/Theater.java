@@ -2,14 +2,17 @@ package logic;
 
 import controller.MainController;
 import javafx.application.Platform;
+import lombok.extern.slf4j.Slf4j;
+
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReentrantLock;
 
-
+@Slf4j
 public class Theater {
+
     private static Theater ourInstance = new Theater();
     private ReentrantLock lock = new ReentrantLock();
     public static Theater getInstance() {
@@ -50,6 +53,8 @@ public class Theater {
         final String result = getTicket();
         lock.unlock();
         if (result == null) return false;
+
+        log.info(window.getName() + " " + result);
         Platform.runLater(new Runnable() {
             public void run() {
                 controller.sellTicket(result, window.getName());
